@@ -1,0 +1,11 @@
+bp_readings = [120, 137, 151, 123, 162, 173, 127, 154]
+
+def normalize_values(values):
+    normalized_values = []
+    maximum_value = max(values)
+    minimum_value = min(values)
+    for value in values:
+        normalized_values.append(round(((value-minimum_value)/(maximum_value-minimum_value)),2))
+    return normalized_values
+
+print(normalize_values(bp_readings))
